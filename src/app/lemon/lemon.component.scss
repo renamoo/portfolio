@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+$brand:"Font Awesome 5 Brands";
+svg text.bottom {
+  font-family: 'Comfortaa', cursive;
+  textPath>tspan{
+    cursor:pointer;
+  }
+  #project{
+    font-family:$brand;
+  }
+  #blog{
+    font-family:"Font Awesome 5 Free";
+    font-weight:900;
+  }
+  #twitter{
+    font-family:$brand;
+  }
+}
