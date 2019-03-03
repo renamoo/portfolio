@@ -1,0 +1,58 @@
+@import '../../../variables.scss';
+
+@mixin circle(){
+  stroke-width:20px;
+  fill:none;
+  transform:rotate(-90deg);
+  transform-origin:center;
+}
+
+$img-width:40px;
+$img-width-sp:28px;
+.skill{
+  display:flex;
+  flex-direction:column;
+}
+
+  img{
+    position:absolute;
+    width:$img-width;
+    height:$img-width;
+    margin: calc((#{$skill-width} - #{$img-width}) / 2);
+    @include sp{
+      width:$img-width-sp;
+      height:$img-width-sp;
+      margin: calc((#{$skill-width-sp} - #{$img-width-sp}) / 2);
+    }
+  }
+
+.description{
+  text-align:center;
+  font-family: 'Comfortaa', cursive;
+  padding:5px 0 10px;
+  @include sp{
+    font-size:0.8rem;
+  }
+}
+
+.chart{
+  width:100%;
+  #front{
+    @include circle();
+    stroke:rgb(114, 206, 218);
+    animation: draw 2s ease-in-out forwards;
+  }
+  #back{
+    @include circle();
+    stroke:rgb(198, 198, 198);
+  }
+}
+
+@keyframes draw{
+  from{
+    stroke-dashoffset:800
+  }
+  to{
+    stroke-dashoffset:500
+  }
+}

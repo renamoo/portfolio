@@ -1,10 +1,54 @@
 @mixin pc(){
-  @media (max-width: 1024px) {
-    @content;
-  }
+    @media (max-width: 1024px){
+        @content;
+    }
 }
 @mixin sp(){
-  @media (max-width: 480px) {
-    @content;
-  }
+    @media (max-width: 480px){
+        @content;
+    }
+}
+
+$logo-height:40%;
+$pc-width:40%;
+$sp-width:80%;
+$skill-width:100px;
+$skill-width-sp:70px;
+$work-width:200px;
+$letter-content-width:480px;
+$letter-title-height:2.0rem;
+
+@mixin responsive-width(){
+    width:$pc-width;
+    @include sp{
+        width:$sp-width;
+    }
+}
+
+@mixin letter-style{
+    background:repeating-linear-gradient(135deg, #dd4433 0px, #dd4433 20px, white 20px, white 40px, #222266 40px, #222266 60px, white 60px, white 80px);
+    box-shadow:0 0 6px rgba(0,0,0,0.6);
+    padding:14px;
+    width:calc(#{$letter-content-width} + 40px);
+    @include sp{
+        width:calc(100vw - 60px);
+    }
+    .content{
+        padding:20px;
+        background:white;
+        max-height:85vh;
+        width:$letter-content-width;
+        @include sp{
+            width:calc(100vw - 100px);
+        }
+    }
+}
+
+@mixin letter-title{
+    font-family:'Satisfy', cursive;
+    font-size:2.0rem;
+    border-bottom:solid 1px black;
+    display:inline-block;
+    margin-bottom:15px;
+    height:$letter-title-height;
 }

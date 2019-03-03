@@ -1,0 +1,27 @@
+
+@import '../../../variables.scss';
+
+.envelope{
+    @include letter-style;
+    .chunk{
+        .heading{
+            @include letter-title;
+        }
+        .skills{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-evenly;
+            .skill{
+                width:$skill-width;
+                @include sp{
+                    width:$skill-width-sp;
+                }
+            }
+        }
+        .comment{
+            @include sp{
+                font-size:0.9rem;
+            }
+        }
+    }
+}

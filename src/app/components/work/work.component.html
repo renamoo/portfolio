@@ -1,0 +1,17 @@
+<section class="work">
+  <div class="title" (click)="onClick('demo')">{{info.title}}</div>
+  <img src="assets/{{info.imgName}}.png" (click)="onClick('demo')">
+  <div class="summary">{{info.summary}} <span *ngIf="info.blog" class="detail" (click)="onClick('blog')">(detail<i
+        class="fas fa-external-link-alt detail-icon"></i>)</span>
+  </div>
+  <div class="bottom">
+    <span class="media">{{info.media}}</span> ・ <span class="when">{{info.when}}</span><br>
+    <span class="tech">
+      <ng-container *ngFor="let tech of info.techIcons" [ngSwitch]="tech">
+        <i *ngSwitchCase="'angular'" class="fab fa-angular"></i>
+        <i *ngSwitchCase="'aws'" class="fab fa-aws"></i>
+      </ng-container>
+    </span>
+    <span class="line">|</span><i *ngIf="info.github" class="fab fa-github" (click)="onClick('github')"></i>
+  </div>
+</section>
