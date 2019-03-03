@@ -1,0 +1,37 @@
+@import '../../../variables.scss';
+
+.work{
+    width:$work-width;
+    img{
+        width:$work-width;
+        cursor:pointer;
+    }
+    .title{
+        font-family:'Comfortaa', cursive;
+        text-align:center;
+        margin-bottom:5px;
+        cursor:pointer;
+    }
+    $font-bottom:0.8rem;
+    .bottom,
+    .summary{
+        font-size:$font-bottom;
+        .detail{
+            cursor:pointer;
+            .detail-icon{
+                font-size:$font-bottom;
+            }
+        }
+    }
+    $font-techs:1.3rem;
+    i{
+        font-size:$font-techs;
+        margin:5px;
+    }
+    .line{
+        font-size:$font-techs;
+    }
+    .fa-github{
+        cursor:pointer;
+    }
+}

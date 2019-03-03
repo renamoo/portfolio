@@ -1,0 +1,20 @@
+@import '../../../variables.scss';
+
+.envelope{
+    @include letter-style;
+    .content{
+        overflow-y:auto;
+    }
+    .heading{
+        display:flex;
+        flex-direction:row;
+        .title{
+            @include letter-title;
+        }
+    }
+    .container{
+        display:flex;
+        flex-flow:wrap;
+        justify-content:space-around;
+    }
+}

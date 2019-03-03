@@ -1,0 +1,36 @@
+@import '../../../variables.scss';
+$logo-height: 40%;
+$pc-width:40%;
+$sp-width:80%;
+@mixin responsive-width(){
+  width:$pc-width;
+    @include sp {
+      width:$sp-width;
+    }
+}
+
+.content{
+  @include responsive-width();
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  .footer,
+  .header{
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    margin:auto;
+  }
+  app-lemon{
+    flex-basis:auto;
+  }
+  .footer{
+    font-size:20px;
+    font-family: 'Vollkorn', serif;
+    .heart{
+      color:rgb(228, 51, 63);
+      padding-right:5px;
+    }
+  }
+}
