@@ -1,36 +1,32 @@
 @import '../../../variables.scss';
-$logo-height: 40%;
-$pc-width:40%;
-$sp-width:80%;
-@mixin responsive-width(){
-  width:$pc-width;
-    @include sp {
-      width:$sp-width;
-    }
+
+@mixin common-header-footer{
+    flex-grow:1;
+    display:flex;
+    align-items:center;
+    margin:auto;
 }
 
 .content{
-  @include responsive-width();
-  z-index:1;
-  display:flex;
-  flex-direction:column;
-  height:100vh;
-  .footer,
-  .header{
-    flex-grow:1;
-    display: flex;
-    align-items: center;
-    margin:auto;
-  }
-  app-lemon{
-    flex-basis:auto;
-  }
-  .footer{
-    font-size:20px;
-    font-family: 'Vollkorn', serif;
-    .heart{
-      color:rgb(228, 51, 63);
-      padding-right:5px;
+    @include responsive-width();
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    .header{
+        font-family:'M PLUS 1p';
+        @include common-header-footer;
     }
-  }
+    app-lemon{
+        flex-basis:auto;
+    }
+    .footer{
+        @include common-header-footer;
+        font-size:20px;
+        font-family:'Vollkorn', serif;
+        .heart{
+            color:rgb(228, 51, 63);
+            padding-right:5px;
+        }
+    }
 }

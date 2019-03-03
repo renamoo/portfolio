@@ -19,8 +19,9 @@
             }
         }
         .comment{
+            font-family:'M PLUS 1p';
             @include sp{
-                font-size:0.9rem;
+                font-size:0.8rem;
             }
         }
     }
