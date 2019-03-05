@@ -1,0 +1,12 @@
+<div class="hamburger" (click)="onClick()">
+  <span class="line" [class.active]="isOpen"></span>
+  <span class="line" [class.active]="isOpen"></span>
+  <span class="line" [class.active]="isOpen"></span>
+</div>
+<div class="content" [class.open]="isOpen">
+  <ul class="menus">
+    <li class="menu" [class.open]="isOpen" (click)="onLinkClick('top')">TOP</li>
+    <li class="menu" [class.open]="isOpen" (click)="onLinkClick('profile')">ABOUT ME</li>
+    <li class="menu" [class.open]="isOpen" (click)="onLinkClick('works')">WORKS</li>
+  </ul>
+</div>

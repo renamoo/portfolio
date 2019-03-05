@@ -1,19 +1,22 @@
-<section class="envelope">
-  <div class="content">
-    <div class="chunk">
-      <div class="heading">Profile</div>
-      <div class="summary">
-        <div class="icon"></div>
-        <div class="comment">
-          {{comment}}
+<app-hamburger></app-hamburger>
+<section class="profile">
+  <div class="envelope">
+    <div class="content">
+      <div class="chunk">
+        <div class="heading">Profile</div>
+        <div class="summary">
+          <div class="icon"></div>
+          <div class="comment">
+            {{comment}}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="chunk">
-      <div class="heading">Skills</div>
-      <div class="skills">
-        <app-skill *ngFor="let skill of skills" [imgName]="skill.imgName" [name]="skill.name" [level]="skill.level"
-          class="skill"></app-skill>
+      <div class="chunk">
+        <div class="heading">Skills</div>
+        <div class="skills">
+          <app-skill *ngFor="let skill of skills" [imgName]="skill.imgName" [name]="skill.name" [level]="skill.level"
+            class="skill"></app-skill>
+        </div>
       </div>
     </div>
   </div>

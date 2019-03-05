@@ -1,4 +1,7 @@
 @import '../../../variables.scss';
+.works{
+    @include base;
+}
 
 .envelope{
     @include letter-style;

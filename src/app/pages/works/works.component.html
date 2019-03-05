@@ -1,11 +1,14 @@
-<section class="envelope">
-  <div class="content">
-    <div class="heading">
-      <span class="title">Works</span>
-    </div>
-    <div class="container">
-      <app-work *ngFor="let work of works" [info]="work">
-      </app-work>
+<app-hamburger></app-hamburger>
+<section class="works">
+  <div class="envelope">
+    <div class="content">
+      <div class="heading">
+        <span class="title">Works</span>
+      </div>
+      <div class="container">
+        <app-work *ngFor="let work of works" [info]="work">
+        </app-work>
+      </div>
     </div>
   </div>
 </section>
