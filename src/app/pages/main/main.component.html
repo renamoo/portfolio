@@ -1,19 +1,14 @@
-<div class="wrap">
-  <section class="main">
-    <div class="content">
-      <div class="header">
-        - 可愛くて、役に立つ -
-      </div>
-      <app-lemon></app-lemon>
-      <div class="footer">
-        <i class="fas fa-heart heart"></i> TypeScript, Angular, SVG
-      </div>
+<app-hamburger></app-hamburger>
+<section class="main">
+  <div class="content">
+    <div class="header">
+      - 可愛くて、役に立つ -
     </div>
-  </section>
-  <section class="main">
-    <app-profile class="profile"></app-profile>
-  </section>
-  <section class="main">
-    <app-works></app-works>
-  </section>
-</div>
+    <app-lemon></app-lemon>
+    <div class="footer">
+      <div class="menu link" (click)="onClick('profile')"><i class="fas fa-user-circle"></i>About Me</div>
+      <div class="menu link" (click)="onClick('works')"><i class="fas fa-briefcase"></i>Works</div>
+      <div class="menu"><i class="fas fa-heart heart"></i> TypeScript, Angular, SVG</div>
+    </div>
+  </div>
+</section>
