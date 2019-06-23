@@ -29,6 +29,16 @@ export class WorksComponent implements OnInit {
 
 const INFO = [
   {
+    title: 'Material-UI Icon List',
+    summary: 'ReactのMaterial-UIのBuilt-inアイコンの一覧が欲しかったのと、Outlinedなどの違いがわからなかったので、検索できて違いがわかりやすいアイコン一覧を作りました。一日で作り切ったのでかなりシンプル。',
+    imgName: 'icon-list',
+    media: 'PC Only',
+    techIcons: ['react'],
+    github: 'https://material-ui-build-in-icons.netlify.com/',
+    when: 'June. 2019',
+    demo: ''
+  },
+  {
     title: 'Hello, Subjects',
     summary: 'RxJSの各Observableの違いをインタラクティブに確認できるデモを作成してみました。',
     imgName: 'hello-subjects',

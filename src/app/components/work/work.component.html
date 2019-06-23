@@ -10,6 +10,7 @@
       <ng-container *ngFor="let tech of info.techIcons" [ngSwitch]="tech">
         <i *ngSwitchCase="'angular'" class="fab fa-angular"></i>
         <i *ngSwitchCase="'aws'" class="fab fa-aws"></i>
+        <i *ngSwitchCase="'react'" class="fab fa-react"></i>
       </ng-container>
     </span>
     <span class="line">|</span><i *ngIf="info.github" class="fab fa-github" (click)="onClick('github')"></i>
