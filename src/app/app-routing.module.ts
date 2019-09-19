@@ -5,8 +5,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { WorksComponent } from './pages/works/works.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/top', pathMatch: 'full' },
-  { path: 'top', component: MainComponent },
+  { path: '', component: MainComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'works', component: WorksComponent },
   { path: '**', redirectTo: '' }
