@@ -29,14 +29,44 @@ export class WorksComponent implements OnInit {
 
 const INFO = [
   {
+    title: 'ng-simple-carousel',
+    summary: 'シンプルでカスタマイズしやすいモバイル対応のAngularカルーセルコンポーネント',
+    imgName: 'carousel',
+    media: 'PC | Mobile',
+    techIcons: ['angular'],
+    github: 'https://github.com/renamoo/ng-simple-carousel',
+    when: 'July. 2020',
+    demo: 'https://ng-simple-carousel.netlify.app/'
+  },
+  {
+    title: 'COMEART',
+    summary: 'アーティスト支援サービスCOMEARTのポータルサイト全面リニューアルを担当しました。',
+    imgName: 'comeart',
+    media: 'PC | Mobile',
+    techIcons: ['angular'],
+    github: '',
+    when: 'July. 2020',
+    demo: 'comeart.co.jp'
+  },
+  {
+    title: 'Unsubscribeしないこだれだ',
+    summary: 'RxJSでUnsubscribeしないと実際どう言う問題が起こりうるのか楽しく体験できたらいいなと思って作りました',
+    imgName: 'unsubscribe-ghost',
+    media: 'PC Only',
+    techIcons: ['angular'],
+    github: 'https://github.com/renamoo/unsubscribe-ghost',
+    when: 'Sep. 2019',
+    demo: 'https://unsubscribe-ghost.netlify.app/'
+  },
+  {
     title: 'Material-UI Icon List',
     summary: 'ReactのMaterial-UIのBuilt-inアイコンの一覧が欲しかったのと、Outlinedなどの違いがわからなかったので、検索できて違いがわかりやすいアイコン一覧を作りました。一日で作り切ったのでかなりシンプル。',
     imgName: 'icon-list',
     media: 'PC Only',
     techIcons: ['react'],
-    github: 'https://material-ui-build-in-icons.netlify.com/',
+    github: 'https://github.com/renamoo/Material-UI-Icon-List',
     when: 'June. 2019',
-    demo: ''
+    demo: 'https://material-ui-build-in-icons.netlify.com/'
   },
   {
     title: 'Hello, Subjects',
