@@ -24,6 +24,7 @@
         }
         .comment{
             font-family:'M PLUS 1p';
+            white-space:pre-wrap;
             @include sp{
                 font-size:0.8rem;
             }
