@@ -1,14 +1,20 @@
 <app-hamburger></app-hamburger>
 <section class="main">
   <div class="content">
-    <div class="header">
-      
+    <app-lemon class="logo"></app-lemon>
+    <div class="menu" *ngFor="let menu of menus">
+      <button class="menu_button" (click)="onClick(menu.id)">
+        <svg class="icon" [ngSwitch]="menu.icon">
+          <use *ngSwitchCase="'twitter'" xlink:href="/assets/icons.svg#icon-twitter" />
+          <use *ngSwitchCase="'pencil'" xlink:href="/assets/icons.svg#icon-pencil2" />
+          <use *ngSwitchCase="'github'" xlink:href="/assets/icons.svg#icon-github" />
+          <use *ngSwitchCase="'notification'" xlink:href="/assets/icons.svg#icon-notification" />
+          <use *ngSwitchCase="'briefcase'" xlink:href="/assets/icons.svg#icon-briefcase" />
+        </svg>
+      </button>
     </div>
-    <app-lemon></app-lemon>
-    <div class="footer">
-      <div class="menu link" (click)="onClick('profile')"><i class="fas fa-user-circle"></i>About Me</div>
-      <div class="menu link" (click)="onClick('works')"><i class="fas fa-briefcase"></i>Works</div>
-      <div class="menu"><i class="fas fa-heart heart"></i> TypeScript, Angular, SVG</div>
+    <div class="menu" *ngFor="let menu of menus">
+      <button class="menu_dot_decoration"></button>
     </div>
   </div>
 </section>
