@@ -10,8 +10,26 @@
           <use *ngSwitchCase="'github'" xlink:href="/assets/icons.svg#icon-github" />
           <use *ngSwitchCase="'notification'" xlink:href="/assets/icons.svg#icon-notification" />
           <use *ngSwitchCase="'briefcase'" xlink:href="/assets/icons.svg#icon-briefcase" />
+          <use *ngSwitchCase="'quill'" xlink:href="/assets/icons.svg#icon-quill" />
         </svg>
       </button>
+      <div class="menu_text" [style.transform]="'rotate(' + menu.rotate + ')'">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="-25 -25 150 150"
+          preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+          <defs>
+            <path d="M 50 0
+           C 75 0  100 25 100 50
+           C 100 75 75 100 50 100
+           C 25 100 0 75 0 50
+           C 0 25 25 0 50 0
+           z" stroke="black" stroke-width="5px" fill="none" id="circle"></path>
+          </defs>
+          <text font-size="35">
+            <textPath xlink:href="#circle" side="right" startOffset="0" id="title">{{menu.text}}
+            </textPath>
+          </text>
+        </svg>
+      </div>
     </div>
     <div class="menu" *ngFor="let menu of menus">
       <button class="menu_dot_decoration"></button>

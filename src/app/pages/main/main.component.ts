@@ -11,32 +11,44 @@ export class MainComponent {
     {
       id: 'twitter',
       icon: 'twitter',
-      link: 'https://twitter.com/Rena_moo'
+      link: 'https://twitter.com/Rena_moo',
+      text: 'murmur',
+      rotate: '30deg'
     },
     {
       id: 'github',
       icon: 'github',
-      link: 'https://github.com/renamoo'
+      link: 'https://github.com/renamoo',
+      text: 'codes',
+      rotate: '-10deg'
     },
     {
       id: 'blog-tech',
-      icon: 'pencil',
-      link: 'https://qiita.com/rena_m'
+      icon: 'quill',
+      link: 'https://qiita.com/rena_m',
+      text: 'tech blog',
+      rotate: '-104deg'
     },
     {
       id: 'blog-misc',
       icon: 'pencil',
-      link: 'https://renamoo.hatenablog.com/'
+      link: 'https://renamoo.hatenablog.com/',
+      text: 'misc blog',
+      rotate: '-104deg'
     },
     {
       id: 'profile',
       icon: 'notification',
-      routerLink: 'profile'
+      routerLink: 'profile',
+      text: 'profile',
+      rotate: '-115deg'
     },
     {
       id: 'works',
       icon: 'briefcase',
-      routerLink: 'works'
+      routerLink: 'works',
+      text: 'works',
+      rotate: '-100deg'
     }
   ];
 
