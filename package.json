@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "redirect": "echo '/*    /index.html   200' > dist/comeart/_redirects"
+    "redirect": "echo '/*    /index.html   200' > docs/_redirects"
   },
   "private": true,
   "dependencies": {
