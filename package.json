@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-path docs --base-href ./ portfolio",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "redirect": "echo '/*    /index.html   200' > docs/_redirects"
+    "redirect": "echo '/*    /index.html   200' > dist/portfolio/_redirects"
   },
   "private": true,
   "dependencies": {
