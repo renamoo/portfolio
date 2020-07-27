@@ -6,20 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  skills: { imgName: string, name: string, level: string }[] = [
-    { imgName: 'ts', name: 'TypeScript', level: '900' },
-    { imgName: 'angular', name: 'Angular', level: '970' },
-    { imgName: 'html5', name: 'HTML5', level: '900' },
-    { imgName: 'java', name: 'Java', level: '900' },
-    { imgName: 'scss', name: 'Scss', level: '900' },
-    { imgName: 'vue', name: 'Vue.js', level: '600' },
-    { imgName: 'aws', name: 'aws', level: '700' }
-  ];
-  comment = `2018年に新卒で大企業向け業務基幹システムの設計・開発・販売を行う企業に入社。Angular + SpringBoot(Java)で製品開発をするかに思われたが、色々あって社内のAngular共通コンポーネントライブラリの立ち上げに関わることになり、配属半年後にはライブラリを丸投げされるようになる。(本人的にはハッピー)
-デモサイトを作ったり、ドキュメントを自動生成させてみたり、テストを一人で書いてみたりする傍ら、時々プロダクト開発も手伝う日々を過ごす。
-可愛くて使いやすくて役に立つものが作りたいなあと思って日々生きている。
-
-2020年には気がついたら転職してクラウド関連の仕事をしているが、相変わらずフロントエンド開発も好きなのでプライベートで開発をしている。チーム開発が好きなのでどうせなら副業を視野に入れたいと思いポートフォリオを改修中。(In Progress)`;
+  profile = PROFILE;
+  comments = COMMENTS;
 
   constructor() { }
 
@@ -27,3 +15,44 @@ export class ProfileComponent implements OnInit {
   }
 
 }
+
+const PROFILE = {
+  comment: `大学では通訳を学んでいたのに新卒入社後に初めてきちんとプログラミングに触れ、
+みるみるうちにその楽しさに目覚めた結果気がついたらエンジニアになっていた。
+可愛くて使いやすくて役に立つものが作りたいなあと思って日々生きている。
+(可愛いは必ずしも可愛いではなく楽しいやかっこいいでもよく、
+使いやすさ＋機能性に＋αしたものを作りたいと言う意)`,
+  skills: `■ Can Teach to beginners
+    Angular, CSS, HTML, TS, JS,
+    GCP(Serverless, Storage), CI/CD tools
+
+  ■ Comfortable to work with
+    React, scss, Jest,
+    AWS(Lambda, S3, API Gateway)
+
+  ■ Have used it
+    Java, Python3, Vue
+`
+};
+
+const COMMENTS = [
+  {
+    id: 'comment_2020',
+    duration: '2020-',
+    comment: `もう少し難しい仕事がしたくなってきた頃合いで
+タイミングよく声をかけていただいたこともあり、クラウド関連の仕事に転職。
+モニタリングやメトリクスを読みつつ情報を収集・分析し、優先度を鑑みて柔軟にマルチタスクしながらCustomer Communicationもする仕事をしている。
+一方変わらず開発(特にチームでの開発)も大好きなのでプライベートで副業やOSSに勤しむ(随時募集中)。
+    `
+  },
+  {
+    id: 'comment_2018',
+    duration: '2018, 2019',
+    comment: `新卒で大企業向け業務基幹システムの設計/開発/販売を行う企業に入社。
+Angular + SpringBootで製品開発をするかに思われたが、色々あって社内のAngularコンポーネントライブラリの立ち上げに関わり、
+配属半年後にはライブラリを丸投げしてもらうように。(本人的にはハッピー)
+デモの開発、ドキュメントの自動生成、CI/CDやUIテストの導入を進める傍ら、
+プロダクトのパフォーマンス改善等も行っていた。
+    `
+  }
+];
