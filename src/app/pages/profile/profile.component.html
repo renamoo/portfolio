@@ -1,16 +1,72 @@
-<app-hamburger></app-hamburger>
-<section class="profile">
-  <div class="envelope">
-    <div class="content">
-      <div class="chunk">
-        <div class="heading">Profile</div>
-        <div class="summary">
-          <div class="icon"></div>
-          <div class="comment">
-            {{comment}}
-          </div>
-        </div>
+<content class="wrap_content">
+  <div class="grid">
+    <section class="top">
+      <div class="svg_wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 100 8" width="100%" height="100%"
+          id="top_svg">
+          <circle cx="50" cy="50" r="50" class="section_background" />
+          <circle cx="48" cy="50" r="50" class="section_stroke" id="top" />
+        </svg>
       </div>
-    </div>
+    </section>
+
+    <section class="title">
+      <div class="title_texts">
+        <div class="title_sub_text">ざっくり</div>
+        <div class="title_text">Profile</div>
+      </div>
+      <ul class="menu">
+        <li><a routerLink="/profile" fragment="profile">About Me</a></li>
+        <li><a routerLink="/profile" fragment="skills">Skills</a></li>
+        <li><a routerLink="/profile" fragment="comment_2020">2020</a></li>
+        <li><a routerLink="/profile" fragment="comment_2018">2018</a></li>
+      </ul>
+    </section>
+
+    <section class="profile" id="profile">
+      <ng-content *ngTemplateOutlet="sectionBackground; context:{title: 'About Me', isRight: true }"></ng-content>
+      <div class="section_text">
+        {{profile.comment}}
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <ng-content *ngTemplateOutlet="sectionBackground; context:{title: 'Skills' }"></ng-content>
+      <div class="section_text">
+        {{profile.skills}}
+      </div>
+    </section>
+
+    <ng-container *ngFor="let com of comments">
+      <section class="comment" [id]="com.id">
+        <ng-content
+          *ngTemplateOutlet="sectionBackground; context:{title: com.duration, isRight: com.id === 'comment_2020' }">
+        </ng-content>
+        <div class="section_text">
+          {{com.comment}}
+        </div>
+      </section>
+    </ng-container>
+
+    <section class="footer">
+      <div><a routerLink="/">← Back to top</a></div>
+    </section>
   </div>
-</section>
+</content>
+
+<ng-template #sectionBackground let-title="title" let-isRight="isRight">
+  <div class="svg_wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="-5 -3 105 105" width="100%" height="100%">
+      <defs>
+        <path d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0" id="circle_path"></path>
+      </defs>
+      <circle cx="50" cy="50" r="50" class="section_background" />
+      <circle cx="48" cy="50" r="50" class="section_stroke" />
+      <text class="section_title" letter-spacing="1.5">
+        <textPath xlink:href="#circle_path" [attr.startOffset]="isRight ? '35%' : '5%'">
+          {{title}}
+        </textPath>
+      </text>
+    </svg>
+  </div>
+</ng-template>
