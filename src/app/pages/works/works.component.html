@@ -1,14 +1,13 @@
 <app-hamburger></app-hamburger>
-<section class="works">
-  <div class="envelope">
-    <div class="content">
-      <div class="heading">
-        <span class="title">Works</span>
-      </div>
-      <div class="container">
-        <app-work *ngFor="let work of works" [info]="work" class="work">
-        </app-work>
-      </div>
-    </div>
+<content class="wrap_content">
+  <div class="heading">
+    Works
   </div>
-</section>
+  <div class="container">
+    <app-work *ngFor="let work of works" [info]="work" class="work">
+    </app-work>
+  </div>
+  <section class="footer">
+    <div><a routerLink="/">← Back to top</a></div>
+  </section>
+</content>

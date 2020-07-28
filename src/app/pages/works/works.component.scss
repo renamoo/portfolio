@@ -1,25 +1,32 @@
 @import '../../../variables.scss';
-.works{
-    @include base;
+
+.wrap_content{
+    background-color:$background-pink;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    padding:16px;
 }
 
-.envelope{
-    @include letter-style;
-    .content{
-        overflow-y:auto;
+.heading{
+    font-family:'Comfortaa', cursive;
+    font-size:1.8rem;
+    text-align:center;
+}
+
+.container{
+    display:flex;
+    flex-flow:row wrap;
+    .work{
+        margin:10px;
     }
-    .heading{
-        display:flex;
-        flex-direction:row;
-        .title{
-            @include letter-title;
-        }
+    @include sp{
+        justify-content:center;
     }
-    .container{
-        display:flex;
-        overflow-x:scroll;
-        .work{
-            margin:10px;
-        }
-    }
+}
+
+.footer{
+    text-align:center;
+    font-family:'Comfortaa', cursive;
+    font-size:1.1rem;
 }
