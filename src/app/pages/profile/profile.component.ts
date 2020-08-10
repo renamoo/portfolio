@@ -22,16 +22,15 @@ const PROFILE = {
 可愛くて使いやすくて役に立つものが作りたいなあと思って日々生きている。
 (可愛いは必ずしも可愛いではなく楽しいやかっこいいでもよく、
 使いやすさ＋機能性に＋αしたものを作りたいと言う意)`,
-  skills: `■ Can Teach to beginners
-    Angular, CSS, HTML, TS, JS,
-    GCP(Serverless, Storage), CI/CD tools
+  skills: `🌟 I love works involving...
+- code writing to make something better or bring someone joy
+- building designs and UI/UX
+- improving developer experiences (writing doc, CI/CD setup etc...)
+- complex issue solving / multi-tasking
+- supporting and assisting people
 
-  ■ Comfortable to work with
-    React, scss, Jest,
-    AWS(Lambda, S3, API Gateway)
+💬 I'm looking for projects / jobs I can work on afterwork and weekends. If you have some ideas, please let me know!
 
-  ■ Have used it
-    Java, Python3, Vue
 `
 };
 

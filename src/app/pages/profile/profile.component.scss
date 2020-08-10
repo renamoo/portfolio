@@ -90,11 +90,15 @@
     .section_text{
         transform:rotate(20deg);
         white-space:pre-wrap;
+        top:22%;
+        left:8%;
     }
     @include sp{
         @include mobile-circle-style;
         .section_text{
             margin-left:15%;
+            left:0%;
+            top:10%;
         }
     }
 }
