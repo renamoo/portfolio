@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarouselController, CarouselImage } from 'ng-simple-carousel';
 
 export interface WorkInfo {
   title: string;
@@ -6,10 +7,12 @@ export interface WorkInfo {
   imgName: string;
   media: string;
   techIcons: string[];
-  blog?: string;
-  github: string;
   when: string;
-  demo: string;
+  links: {
+    name: string;
+    url: string;
+    icon: string;
+  }[];
 }
 
 @Component({
@@ -19,10 +22,32 @@ export interface WorkInfo {
 })
 export class WorksComponent implements OnInit {
   works: WorkInfo[] = INFO;
+  images: CarouselImage[];
+  controller = new CarouselController();
+  activeIndex = 0;
 
   constructor() { }
 
   ngOnInit() {
+    this.images = this.works.map((work, i) => {
+      return {
+        id: i.toString(),
+        src: `assets/${work.imgName}.png`
+      };
+    });
+  }
+
+  onClick(diff: number) {
+    this.activeIndex += diff;
+    if (this.activeIndex < 0) {
+      this.activeIndex = 0;
+    } else if (this.activeIndex > this.works.length - 1) {
+      this.activeIndex = this.works.length - 1;
+    }
+  }
+
+  onImgChange(newId: string) {
+    this.activeIndex = Number(newId);
   }
 
 }
@@ -34,9 +59,19 @@ const INFO = [
     imgName: 'carousel',
     media: 'PC | Mobile',
     techIcons: ['angular'],
-    github: 'https://github.com/renamoo/ng-simple-carousel',
     when: 'July. 2020',
-    demo: 'https://ng-simple-carousel.netlify.app/'
+    links: [
+      {
+        name: 'Repo',
+        icon: 'github',
+        url: 'https://github.com/renamoo/ng-simple-carousel'
+      },
+      {
+        name: 'Demo',
+        icon: 'globe',
+        url: 'https://ng-simple-carousel.netlify.app/'
+      }
+    ]
   },
   {
     title: 'COMEART',
@@ -46,7 +81,13 @@ const INFO = [
     techIcons: ['angular'],
     github: '',
     when: 'July. 2020',
-    demo: 'comeart.co.jp'
+    links: [
+      {
+        name: 'Website',
+        icon: 'globe',
+        url: 'https://comeart.co.jp'
+      }
+    ]
   },
   {
     title: 'Unsubscribeしないこだれだ',
@@ -54,9 +95,19 @@ const INFO = [
     imgName: 'unsubscribe-ghost',
     media: 'PC Only',
     techIcons: ['angular'],
-    github: 'https://github.com/renamoo/unsubscribe-ghost',
     when: 'Sep. 2019',
-    demo: 'https://unsubscribe-ghost.netlify.app/'
+    links: [
+      {
+        name: 'Repo',
+        icon: 'github',
+        url: 'https://github.com/renamoo/unsubscribe-ghost'
+      },
+      {
+        name: 'Demo',
+        icon: 'globe',
+        url: 'https://unsubscribe-ghost.netlify.app/'
+      }
+    ]
   },
   {
     title: 'Material-UI Icon List',
@@ -64,9 +115,19 @@ const INFO = [
     imgName: 'icon-list',
     media: 'PC Only',
     techIcons: ['react'],
-    github: 'https://github.com/renamoo/Material-UI-Icon-List',
     when: 'June. 2019',
-    demo: 'https://material-ui-build-in-icons.netlify.com/'
+    links: [
+      {
+        name: 'Repo',
+        icon: 'github',
+        url: 'https://github.com/renamoo/Material-UI-Icon-List'
+      },
+      {
+        name: 'Website',
+        icon: 'globe',
+        url: 'https://material-ui-build-in-icons.netlify.com/'
+      }
+    ]
   },
   {
     title: 'Hello, Subjects',
@@ -74,10 +135,24 @@ const INFO = [
     imgName: 'hello-subjects',
     media: 'PC Only',
     techIcons: ['angular', 'aws'],
-    blog: 'https://qiita.com/rena_m/items/520127646361c66d7d3f',
-    github: 'https://github.com/renamoo/HelloSubjects',
     when: 'Dec. 2018',
-    demo: 'https://master.d1t0005mradh7l.amplifyapp.com/'
+    links: [
+      {
+        name: 'Repo',
+        icon: 'github',
+        url: 'https://github.com/renamoo/HelloSubjects'
+      },
+      {
+        name: 'Demo',
+        icon: 'globe',
+        url: 'https://master.d1t0005mradh7l.amplifyapp.com/'
+      },
+      {
+        name: 'Tech Blog',
+        icon: 'pen',
+        url: 'https://qiita.com/rena_m/items/520127646361c66d7d3f'
+      }
+    ]
   },
   {
     title: '25',
@@ -85,8 +160,18 @@ const INFO = [
     imgName: '25',
     media: 'Mobile Only',
     techIcons: ['angular', 'aws'],
-    github: 'https://github.com/renamoo/K-s-Game',
     when: 'Oct. 2018',
-    demo: 'https://d1dqknn2dmu0fk.cloudfront.net/'
+    links: [
+      {
+        name: 'Repo',
+        icon: 'github',
+        url: 'https://github.com/renamoo/Material-UI-Icon-List'
+      },
+      {
+        name: 'Demo',
+        icon: 'globe',
+        url: 'https://d1dqknn2dmu0fk.cloudfront.net/'
+      }
+    ]
   }
 ];

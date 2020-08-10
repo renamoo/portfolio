@@ -44,10 +44,10 @@ export class MainComponent {
       rotate: '-115deg'
     },
     {
-      id: 'works',
+      id: 'artifacts',
       icon: 'briefcase',
       routerLink: 'works',
-      text: 'works',
+      text: 'artifacts',
       rotate: '-100deg'
     }
   ];

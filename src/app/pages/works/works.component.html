@@ -1,10 +1,17 @@
-<app-hamburger></app-hamburger>
 <content class="wrap_content">
   <div class="heading">
-    Works
+    Artifacts
   </div>
   <div class="container">
-    <app-work *ngFor="let work of works" [info]="work" class="work">
+    <div class="svg_wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 100 100" width="100%" height="100%">
+        <circle cx="50" cy="50" r="50" class="section_background" />
+      </svg>
+    </div>
+    <app-work [info]="works[activeIndex]" class="work">
+      <ng-simple-carousel-with-button *ngIf="images" [images]="images" [controller]="controller"
+        (imgChange)="onImgChange($event)">
+      </ng-simple-carousel-with-button>
     </app-work>
   </div>
   <section class="footer">

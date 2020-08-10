@@ -1,18 +1,27 @@
 <section class="work">
-  <div class="title" (click)="onClick('demo')">{{info.title}}</div>
-  <img src="assets/{{info.imgName}}.png" (click)="onClick('demo')">
-  <div class="summary">{{info.summary}} <span *ngIf="info.blog" class="detail" (click)="onClick('blog')">(detail<i
-        class="fas fa-external-link-alt detail-icon"></i>)</span>
+  <h2 class="title" (click)="onClick('demo')">{{info.title}}</h2>
+  <div class="img_wrap">
+    <ng-content></ng-content>
+  </div>
+  <div class="summary">{{info.summary}}
   </div>
   <div class="bottom">
     <span class="media">{{info.media}}</span> ・ <span class="when">{{info.when}}</span><br>
-    <span class="tech">
+    <!-- <span class="tech">
       <ng-container *ngFor="let tech of info.techIcons" [ngSwitch]="tech">
         <i *ngSwitchCase="'angular'" class="fab fa-angular"></i>
         <i *ngSwitchCase="'aws'" class="fab fa-aws"></i>
         <i *ngSwitchCase="'react'" class="fab fa-react"></i>
       </ng-container>
-    </span>
-    <span class="line">|</span><i *ngIf="info.github" class="fab fa-github" (click)="onClick('github')"></i>
+    </span> -->
+    <button *ngFor="let link of info.links" (click)="onClick(link.url)" class="link_button">
+      <ng-container [ngSwitch]="link.icon">
+        <i *ngSwitchCase="'github'" class="fab fa-github"></i>
+        <i *ngSwitchCase="'npm'" class="fab fa-npm"></i>
+        <i *ngSwitchCase="'globe'" class="fas fa-globe"></i>
+        <i *ngSwitchCase="'pen'" class="fas fa-pen"></i>
+      </ng-container>
+      {{link.name}}
+    </button>
   </div>
 </section>
