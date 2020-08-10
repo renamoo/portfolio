@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgSimpleCarouselModule } from 'ng-simple-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HamburgerComponent } from './components/hamburger/hamburger.component';
@@ -9,7 +10,6 @@ import { WorkComponent } from './components/work/work.component';
 import { MainComponent } from './pages/main/main.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WorksComponent } from './pages/works/works.component';
-
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { WorksComponent } from './pages/works/works.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgSimpleCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

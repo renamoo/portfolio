@@ -8,18 +8,13 @@ import { WorkInfo } from './../../pages/works/works.component';
 })
 export class WorkComponent implements OnInit {
   @Input() info: WorkInfo;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(toGo: string) {
-    let url;
-    switch (toGo) {
-      case 'blog': url = this.info.blog; break;
-      case 'github': url = this.info.github; break;
-      case 'demo': url = this.info.demo; break;
-    }
+  onClick(url: string) {
     window.open(url, '_blank');
   }
 }

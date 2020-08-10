@@ -2,10 +2,12 @@
 
 .wrap_content{
     background-color:$background-pink;
-    height:auto;
     display:flex;
     flex-direction:column;
     padding:16px;
+    @include sp{
+        overflow-x:hidden;
+    }
 }
 
 .heading{
@@ -16,13 +18,29 @@
 
 .container{
     display:flex;
-    flex-flow:row wrap;
-    .work{
-        margin:10px;
-    }
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:0;
+    height:100%;
+    margin:16px;
+}
+
+.svg_wrap{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+    pointer-events:none;
     @include sp{
-        justify-content:center;
+        width:130%;
+        height:130%;
+        bottom:0;
     }
+}
+
+.section_background{
+    fill:$background-white;
 }
 
 .footer{

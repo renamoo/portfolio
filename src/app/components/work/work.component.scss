@@ -1,15 +1,28 @@
 @import '../../../variables.scss';
 
 .work{
-    width:$work-width;
+    width:100%;
+    padding:16px;
+    text-align:center;
+    box-sizing:border-box;
+    .img_wrap{
+        width:50vh;
+        height:35vh;
+        margin:auto;
+        @include sp{
+            height:calc(var(--vh, 1vh) * 40);
+        }
+    }
     img{
-        width:$work-width;
+        width:100%;
+        height:100%;
+        object-fit:contain;
         cursor:pointer;
     }
     .title{
         font-family:'Comfortaa', cursive;
-        text-align:center;
         margin-bottom:5px;
+        font-weight:300;
         cursor:pointer;
     }
     $font-bottom:0.8rem;
@@ -17,11 +30,12 @@
     .summary{
         font-size:$font-bottom;
         font-family:'M PLUS 1p';
-        .detail{
-            cursor:pointer;
-            .detail-icon{
-                font-size:$font-bottom;
-            }
+    }
+    .summary{
+        width:60%;
+        margin:auto;
+        @include sp{
+            width:100%;
         }
     }
     $font-techs:1.3rem;
@@ -32,7 +46,8 @@
     .line{
         font-size:$font-techs;
     }
-    .fa-github{
-        cursor:pointer;
+    .link_button{
+        background:none;
+        border:none;
     }
 }
