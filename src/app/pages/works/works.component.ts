@@ -70,6 +70,11 @@ const INFO = [
         name: 'Demo',
         icon: 'globe',
         url: 'https://ng-simple-carousel.netlify.app/'
+      },
+      {
+        name: 'npm',
+        icon: 'npm',
+        url: 'https://www.npmjs.com/package/ng-simple-carousel'
       }
     ]
   },
@@ -86,6 +91,11 @@ const INFO = [
         name: 'Website',
         icon: 'globe',
         url: 'https://comeart.co.jp'
+      },
+      {
+        name: 'Tech Blog',
+        icon: 'pen',
+        url: 'https://qiita.com/rena_m/items/451715080d720deb0396'
       }
     ]
   },

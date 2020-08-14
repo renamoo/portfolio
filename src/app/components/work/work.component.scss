@@ -1,14 +1,13 @@
 @import '../../../variables.scss';
 
 .work{
-    width:100%;
     padding:16px;
     text-align:center;
     box-sizing:border-box;
     .img_wrap{
         width:50vh;
         height:35vh;
-        margin:auto;
+        margin:5px auto 0;
         @include sp{
             height:calc(var(--vh, 1vh) * 40);
         }
@@ -25,29 +24,39 @@
         font-weight:300;
         cursor:pointer;
     }
-    $font-bottom:0.8rem;
-    .bottom,
-    .summary{
-        font-size:$font-bottom;
-        font-family:'M PLUS 1p';
+    $font-small-text:0.9rem;
+    .media_when{
+        font-size:$font-small-text;
+        margin:0 auto 5px;
     }
     .summary{
+        font-size:$font-small-text;
+        font-family:'M PLUS 1p';
+        margin:0 auto 5px;
         width:60%;
         margin:auto;
         @include sp{
             width:100%;
         }
     }
-    $font-techs:1.3rem;
-    i{
-        font-size:$font-techs;
-        margin:5px;
-    }
-    .line{
-        font-size:$font-techs;
+    .link_buttons{
+        display:flex;
+        justify-content:center;
+        width:60%;
+        margin:auto;
     }
     .link_button{
         background:none;
         border:none;
+        line-height:2.0rem;
+        transition:background 1s;
+        border-radius:15px;
+        padding:0 10px;
+        margin:0 2.5px;
+        cursor:pointer;
+        font-size:$font-small-text;
+        &:hover{
+            background:$hover-gray;
+        }
     }
 }

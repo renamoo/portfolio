@@ -9,9 +9,8 @@
       </svg>
     </div>
     <app-work [info]="works[activeIndex]" class="work">
-      <ng-simple-carousel-with-button *ngIf="images" [images]="images" [controller]="controller"
-        (imgChange)="onImgChange($event)">
-      </ng-simple-carousel-with-button>
+      <app-carousel *ngIf="images" [images]="images" [controller]="controller" (imgChange)="onImgChange($event)">
+      </app-carousel>
     </app-work>
   </div>
   <section class="footer">

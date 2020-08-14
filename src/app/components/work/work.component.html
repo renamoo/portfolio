@@ -1,19 +1,6 @@
 <section class="work">
   <h2 class="title" (click)="onClick('demo')">{{info.title}}</h2>
-  <div class="img_wrap">
-    <ng-content></ng-content>
-  </div>
-  <div class="summary">{{info.summary}}
-  </div>
-  <div class="bottom">
-    <span class="media">{{info.media}}</span> ・ <span class="when">{{info.when}}</span><br>
-    <!-- <span class="tech">
-      <ng-container *ngFor="let tech of info.techIcons" [ngSwitch]="tech">
-        <i *ngSwitchCase="'angular'" class="fab fa-angular"></i>
-        <i *ngSwitchCase="'aws'" class="fab fa-aws"></i>
-        <i *ngSwitchCase="'react'" class="fab fa-react"></i>
-      </ng-container>
-    </span> -->
+  <div class="link_buttons">
     <button *ngFor="let link of info.links" (click)="onClick(link.url)" class="link_button">
       <ng-container [ngSwitch]="link.icon">
         <i *ngSwitchCase="'github'" class="fab fa-github"></i>
@@ -23,5 +10,13 @@
       </ng-container>
       {{link.name}}
     </button>
+  </div>
+  <div class="img_wrap">
+    <ng-content></ng-content>
+  </div>
+  <div class="summary">{{info.summary}}
+  </div>
+  <div class="media_when">
+    <span class="media">{{info.media}}</span> ・ <span class="when">{{info.when}}</span>
   </div>
 </section>

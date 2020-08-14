@@ -10,6 +10,7 @@ import { WorkComponent } from './components/work/work.component';
 import { MainComponent } from './pages/main/main.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WorksComponent } from './pages/works/works.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WorksComponent } from './pages/works/works.component';
     SkillComponent,
     WorkComponent,
     HamburgerComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
