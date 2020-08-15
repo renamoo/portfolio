@@ -32,7 +32,12 @@ export class WorksComponent implements OnInit {
     this.images = this.works.map((work, i) => {
       return {
         id: i.toString(),
-        src: `assets/${work.imgName}.png`
+        src: `assets/${work.imgName}.png`,
+        alt: 'website capture',
+        sources: [{
+          srcset: `assets/${work.imgName}.webp`,
+          type: 'image/webp'
+        }]
       };
     });
   }
@@ -55,7 +60,7 @@ export class WorksComponent implements OnInit {
 const INFO = [
   {
     title: 'ng-simple-carousel',
-    summary: 'シンプルでカスタマイズしやすいモバイル対応のAngularカルーセルコンポーネント',
+    summary: 'シンプルさ、カスタマイズのしやすさを重視した軽量かつレスポンシブなAngularカルーセルを作りました。',
     imgName: 'carousel',
     media: 'PC | Mobile',
     techIcons: ['angular'],
@@ -70,6 +75,11 @@ const INFO = [
         name: 'Demo',
         icon: 'globe',
         url: 'https://ng-simple-carousel.netlify.app/'
+      },
+      {
+        name: 'npm',
+        icon: 'npm',
+        url: 'https://www.npmjs.com/package/ng-simple-carousel'
       }
     ]
   },
@@ -86,12 +96,17 @@ const INFO = [
         name: 'Website',
         icon: 'globe',
         url: 'https://comeart.co.jp'
+      },
+      {
+        name: 'Blog',
+        icon: 'pen',
+        url: 'https://qiita.com/rena_m/items/451715080d720deb0396'
       }
     ]
   },
   {
     title: 'Unsubscribeしないこだれだ',
-    summary: 'RxJSでUnsubscribeしないと実際どう言う問題が起こりうるのか楽しく体験できたらいいなと思って作りました',
+    summary: 'RxJSでUnsubscribeしないと実際どう言う問題が起こりうるのか、楽しく体験できたらいいなと思って作りました',
     imgName: 'unsubscribe-ghost',
     media: 'PC Only',
     techIcons: ['angular'],
@@ -106,12 +121,17 @@ const INFO = [
         name: 'Demo',
         icon: 'globe',
         url: 'https://unsubscribe-ghost.netlify.app/'
+      },
+      {
+        name: 'Blog',
+        icon: 'pen',
+        url: 'https://qiita.com/rena_m/items/55103ea423c78a5776c6'
       }
     ]
   },
   {
     title: 'Material-UI Icon List',
-    summary: 'ReactのMaterial-UIのBuilt-inアイコンの一覧が欲しかったのと、Outlinedなどの違いがわからなかったので、検索できて違いがわかりやすいアイコン一覧を作りました。一日で作り切ったのでかなりシンプル。',
+    summary: 'ReactのMaterial-UIのBuilt-inアイコンの一覧が欲しかったのと、Outlinedなどの違いがわからなかったので、検索できて違いがわかりやすいアイコン一覧を作りました。一日で作り切ったのでかなりシンプルです。',
     imgName: 'icon-list',
     media: 'PC Only',
     techIcons: ['react'],
