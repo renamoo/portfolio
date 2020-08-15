@@ -32,7 +32,12 @@ export class WorksComponent implements OnInit {
     this.images = this.works.map((work, i) => {
       return {
         id: i.toString(),
-        src: `assets/${work.imgName}.png`
+        src: `assets/${work.imgName}.png`,
+        alt: 'website capture',
+        sources: [{
+          srcset: `assets/${work.imgName}.webp`,
+          type: 'image/webp'
+        }]
       };
     });
   }
