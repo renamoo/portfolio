@@ -42,8 +42,8 @@
     .link_buttons{
         display:flex;
         justify-content:center;
-        width:60%;
         margin:auto;
+        flex-flow:row wrap;
     }
     .link_button{
         background:none;
