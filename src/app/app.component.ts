@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { LocaleService } from './services/locale.service';
 
 /**
  * For google analytics
@@ -14,11 +15,12 @@ let gtag: (name: string, id: string, path: { [key: string]: unknown }) => void;
 export class AppComponent implements OnInit {
   title = 'portfolio';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private locale: LocaleService) { }
 
   ngOnInit() {
     this.setCustomCSSVariable();
     this.registerRouterEventToGA();
+    this.locale.init();
   }
 
   /**

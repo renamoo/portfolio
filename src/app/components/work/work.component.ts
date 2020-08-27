@@ -8,6 +8,7 @@ import { WorkInfo } from './../../pages/works/works.component';
 })
 export class WorkComponent implements OnInit {
   @Input() info: WorkInfo;
+  @Input() locale: 'en' | 'ja';
 
   constructor() { }
 
