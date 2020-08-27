@@ -48,3 +48,25 @@
     font-family:'Comfortaa', cursive;
     font-size:1.1rem;
 }
+
+.locale{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    display:flex;
+    align-items:center;
+    .locale_switch{
+        transform:rotate(90deg);
+    }
+    @include sp{
+        top:8px;
+        right:8px;
+        width:100vw;
+        height:auto;
+        justify-content:flex-end;
+        .locale_switch{
+            transform:none;
+        }
+    }
+}

@@ -11,6 +11,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WorksComponent } from './pages/works/works.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { LocaleComponent } from './components/locale/locale.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     WorkComponent,
     HamburgerComponent,
     CarouselComponent,
+    LocaleComponent,
   ],
   imports: [
     BrowserModule,
