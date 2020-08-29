@@ -178,3 +178,25 @@
     font-size:0.9rem;
     opacity:0.6;
 }
+
+.locale{
+    position:fixed;
+    left:0;
+    top:0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    .locale_switch{
+        transform:rotate(90deg);
+    }
+    @include sp{
+        top:8px;
+        right:8px;
+        width:100vw;
+        height:auto;
+        justify-content:flex-end;
+        .locale_switch{
+            transform:none;
+        }
+    }
+}

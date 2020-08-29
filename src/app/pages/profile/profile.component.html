@@ -26,7 +26,7 @@
     <section class="profile" id="profile">
       <ng-content *ngTemplateOutlet="sectionBackground; context:{title: 'About Me', isRight: true }"></ng-content>
       <div class="section_text">
-        {{profile.comment}}
+        {{profile.comment[locale]}}
       </div>
     </section>
 
@@ -44,7 +44,7 @@
           *ngTemplateOutlet="sectionBackground; context:{title: com.duration, isRight: com.id === 'comment_2020' }">
         </ng-content>
         <div class="section_text">
-          {{com.comment}}
+          {{com.comment[locale]}}
         </div>
       </section>
     </ng-container>
@@ -52,6 +52,10 @@
     <section class="footer">
       <div><a routerLink="/">← Back to top</a></div>
     </section>
+
+    <div class="locale">
+      <app-locale class="locale_switch"></app-locale>
+    </div>
   </div>
 </content>
 
